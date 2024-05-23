@@ -7,7 +7,7 @@ const search = new Search("name")
 search.addDocuments(foto)
 search.addIndex("name")
 
-app.express();
+const app = express();
 
 app.get("/api/foto", (req, res) => {
   const { query } = req
