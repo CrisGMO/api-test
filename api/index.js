@@ -1,7 +1,7 @@
 import express from 'express'
 import { Search } from "js-search"
 
-import foto, { map } from "./foto.json"
+import foto, { map } from "./fotos.json"
 
 const search = new Search("name")
 search.addDocuments(foto)
