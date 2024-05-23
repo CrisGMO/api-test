@@ -3,6 +3,8 @@ import { Search } from "js-search"
 
 import foto, { map } from "./fotos.json"
 
+const foto = require("./fotos.json")
+
 const search = new Search("name")
 search.addDocuments(foto)
 search.addIndex("name")
