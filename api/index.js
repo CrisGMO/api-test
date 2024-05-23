@@ -1,7 +1,7 @@
 import { FotoModel } from '../Models/pg/fotos.js'
 import express, { json } from 'express'; 
-import { createFotoRouter } from './Controllers/routes.js';
-import { corsMiddleware } from './middlewares/cors.js';
+import { createFotoRouter } from '../Controllers/routes.js';
+import { corsMiddleware } from '../middlewares/cors.js';
 import 'dotenv/config';
 import path from 'path';
 import { fileURLToPath } from 'url';
