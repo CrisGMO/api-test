@@ -22,4 +22,4 @@ app.use('/', (req, res) => {
 
 // const app = createApp({ fotoModel: FotoModel })
 
-export {app, FotoModel}
+export default app
