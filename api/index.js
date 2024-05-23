@@ -11,12 +11,12 @@ app.get("/api/foto", (req, res) => {
   const { query } = req
 
   try {
-    const breed = query.search
+    const foto = query.search
 
-    if (breed) {
+    if (foto) {
       res.send(search.search(breed))
     }
-    res.send(map((b) => ({ name: b })))
+    res.send(map((f) => ({ name: f })))
   } catch (error) {
     console.log("error", error)
   }
