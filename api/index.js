@@ -1,4 +1,4 @@
-import app from 'express'
+import express from 'express'
 import { Search } from "js-search"
 
 import foto from "./fotos.json" assert { type: 'json' }
@@ -6,6 +6,8 @@ import foto from "./fotos.json" assert { type: 'json' }
 const search = new Search("name")
 search.addDocuments(foto)
 search.addIndex("name")
+
+app.express();
 
 app.get("/api/foto", (req, res) => {
   const { query } = req
