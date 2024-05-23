@@ -1,7 +1,8 @@
 {
   "name": "breeds-be",
   "version": "1.0.0",
-  "description": "",
+  "type": "module",
+  "description": "- [Set up express basic api](https://github.com/cyberpolin/petmate-breeds-be/tree/basic-breed-api)\r - [Add search functions](https://github.com/cyberpolin/petmate-breeds-be/tree/basic-breed-api/add-search-functions)\r - [Deploy it to vercel](https://github.com/cyberpolin/petmate-breeds-be/tree/basic-breed-api/vercel-deploy)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +12,6 @@
   "dependencies": {
     "express": "^4.18.2",
     "js-search": "^2.0.0"
-  }
+  },
+  "keywords": []
 }
