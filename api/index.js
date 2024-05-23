@@ -28,8 +28,8 @@
 //   const { id } = req.params
 //   res.send(foto[id])
 // })
-import { createApp } from './app.js'
-import { FotoModel } from './Models/pg/fotos.js'
+import { createApp } from '../app.js'
+import { FotoModel } from '../Models/pg/fotos.js'
 
 const app = createApp({ fotoModel: FotoModel })
 
