@@ -1,9 +1,7 @@
 import app from 'express'
 import { Search } from "js-search"
 
-import foto from "./fotos.json"
-
-// const foto = require("./fotos.json")
+import foto from "./fotos.json" assert { type: 'json' }
 
 const search = new Search("name")
 search.addDocuments(foto)
