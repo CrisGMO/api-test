@@ -16,7 +16,7 @@ app.use(corsMiddleware())
 app.disable('x-powered-by')
 
 app.use('/api/fotos', createFotoRouter({ fotoModel:FotoModel }))
-app.use('/', (req, res) => {
+app.use('/(.*)', (req, res) => {
   res.sendFile(path.join(__dirname, '/Views/index.html'));
 })
 
