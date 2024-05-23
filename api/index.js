@@ -1,7 +1,7 @@
 import app from 'express'
 import { Search } from "js-search"
 
-import foto, { map } from "./fotos.json"
+// import foto, { map } from "./fotos.json"
 
 const foto = require("./fotos.json")
 
