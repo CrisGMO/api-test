@@ -1,36 +1,25 @@
-// import express from 'express'
-// import { Search } from "js-search"
-
-// import foto from "./fotos.json" assert { type: 'json' }
-
-// const search = new Search("name")
-// search.addDocuments(foto)
-// search.addIndex("name")
-
-// const app = express();
-
-// app.get("/api/foto", (req, res) => {
-//   const { query } = req
-
-//   try {
-//     const foto = query.search
-
-//     if (foto) {
-//       res.send(search.search(breed))
-//     }
-//     res.send(map((f) => ({ name: f })))
-//   } catch (error) {
-//     console.log("error", error)
-//   }
-// })
-
-// app.get("/api/foto/:id", (req, res) => {
-//   const { id } = req.params
-//   res.send(foto[id])
-// })
-import { createApp } from '../app.js'
 import { FotoModel } from '../Models/pg/fotos.js'
+import express, { json } from 'express'; 
+import { createFotoRouter } from './Controllers/routes.js';
+import { corsMiddleware } from './middlewares/cors.js';
+import 'dotenv/config';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const app = createApp({ fotoModel: FotoModel })
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename)
+
+const app = express()
+app.use(json())
+app.use(corsMiddleware())
+app.disable('x-powered-by')
+
+app.use('/api/fotos', createFotoRouter({ fotoModel }))
+app.use('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/Views/index.html'));
+})
+
+// const app = createApp({ fotoModel: FotoModel })
 
 export {app, FotoModel}
