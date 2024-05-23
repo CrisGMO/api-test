@@ -20,6 +20,4 @@ app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/Views/index.html'));
 })
 
-// const app = createApp({ fotoModel: FotoModel })
-
 export default app

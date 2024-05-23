@@ -12,7 +12,7 @@ export class FotoController {
       res.json(fotos);
     } catch (error) {
       console.error("Error fetching photos:", error);
-      res.status(500).json({ error: "Internal Server Error" });
+      res.status(500).json({ error: "Internal Server Error. Sorry" });
     }
   }
 
