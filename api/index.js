@@ -33,4 +33,4 @@ import { FotoModel } from '../Models/pg/fotos.js'
 
 const app = createApp({ fotoModel: FotoModel })
 
-export default app
+export {app, FotoModel}
