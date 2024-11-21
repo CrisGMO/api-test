@@ -1,0 +1,22 @@
+### pedido de fotos                                
+GET https://foto-api.vercel.app/api/fotos
+
+### pedido de foto por id
+GET https://foto-api.vercel.app/api/fotos/
+
+### pedido de filas
+GET https://foto-api.vercel.app/api/fotos/count
+
+### crear foto
+POST  https://foto-api.vercel.app/api/fotos
+Content-Type: application/json
+
+{
+    "foto" : "https://ibb.c"
+}
+
+###borrar fila con id
+DELETE https://foto-api.vercel.app/api/fotos/deleteById/
+
+### borrar todas las fotos
+DELETE https://foto-api.vercel.app/api/fotos/deleteAll
