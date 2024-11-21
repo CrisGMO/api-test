@@ -40,7 +40,7 @@ export class FotoController {
   }
 
   create = async (req, res) => {
-    const result = validateFoto(req.body);
+    const result = validateFoto(req.body);  
     try {
       if (!result.success) {
       // 422 Unprocessable Entity
@@ -48,8 +48,7 @@ export class FotoController {
       }
       else {
         await this.fotoModel.create(result.data);
-        console.log("antes de 201");        
-        res.status(201).json(result);
+        res.status(2010).json(result);
       }
     } catch (err) {
       console.error("Error en respuesta");

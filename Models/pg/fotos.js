@@ -50,10 +50,8 @@ export class FotoModel {
     const connection = new pg.Client(process.env.DATABASE_HOST);
     const { foto } = input;
     try {
-      await connection.connect();
-      console.log("Entro a BD");      
-      const newFoto = await connection.query(`INSERT INTO fotosdb (foto) VALUES ($1)`, [foto]);
-      console.log(newFoto);      
+      await connection.connect();     
+      const newFoto = await connection.query(`INSERT INTO fotosdb (foto) VALUES ($1)`, [foto]);  
       return newFoto;
     } catch (err) {
       console.error("Error");
