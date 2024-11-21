@@ -48,7 +48,7 @@ export class FotoController {
       }
       else {
         await this.fotoModel.create(result.data);
-        res.status(2010).json(result);
+        res.status(201).json(result);
       }
     } catch (err) {
       console.error("Error en respuesta");
