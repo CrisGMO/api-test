@@ -51,7 +51,9 @@ export class FotoModel {
     const { foto } = input;
     try {
       await connection.connect();
+      console.log("Entro a BD");      
       const newFoto = await connection.query(`INSERT INTO fotosdb (foto) VALUES ($1)`, [foto]);
+      console.log(newFoto);      
       return newFoto;
     } catch (err) {
       console.error("Error");

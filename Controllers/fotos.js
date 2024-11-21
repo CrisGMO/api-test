@@ -48,6 +48,7 @@ export class FotoController {
       }
       else {
         await this.fotoModel.create(result.data);
+        console.log("antes de 201");        
         res.status(201).json(result);
       }
     } catch (err) {
